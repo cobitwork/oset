@@ -25,6 +25,8 @@
  */
 
 #include "../mollib/mollib.h"
+#include <ctype.h>
+
 int test_sk2(struct mol *mol);
 
 void debug_check(int flag);

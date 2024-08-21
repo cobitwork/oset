@@ -571,15 +571,10 @@ char *get_molinfo(struct struct_info *info, struct mol *mol)
 		logadd(buf, "%s\n", mol->dbname);
 
 	logadd(buf, "\nATOM TYPES:\n%s", aux = list_atomtypes(mol));
-	free(aux);
-
 	logadd(buf, "\nFUNCTIONAL GROUPS:\n%s", aux = list_fgroups(info, mol));
-	free(aux);
-
 	logadd(buf, "\nRINGS:\n%s", aux = list_rings(info, mol));
-	free(aux);
-
 	logadd(buf, "\nCOMPLEXITY = %i", mol->complexity);
+	free(aux);
 	
 	return(log2str(buf));
 }
