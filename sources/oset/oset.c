@@ -70,7 +70,7 @@ int main(int argc, char *argv[])
 		err = _init_err();
 
 		parse_mol(info, mol, err);
-		
+
 		test_sk2(mol);
 //		printf("%s\n", mol->smiles);
 

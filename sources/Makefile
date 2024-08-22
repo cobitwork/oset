@@ -33,10 +33,10 @@ CPPFLAGS = -D_DEBUG -DLINUX
 
 all: server oset cgi
 server: $(OSETOBJS) $(SERVEROBJS)
-	cc -o server/server $(OSETOBJS) $(SERVEROBJS) -m -lpthread
+	cc -o server/server $(OSETOBJS) $(SERVEROBJS) -lm -lpthread
 
 oset: $(OSETOBJS) oset/oset.o
-	cc -o oset/oset -lm -lpthread $(OSETOBJS) oset/oset.o -lm -lpthread
+	cc -o oset/oset $(OSETOBJS) oset/oset.o -lm -lpthread
 
 cgi: cgi/startan.o cgi/savemol.o cgi/loadmol.o cgi/loadmol_marvin.o 
 	@if [ ! -d $(CGIBIN_DIR) ]; then \

@@ -87,7 +87,7 @@ int test_sk2(struct mol *mol)
 	addobj_sk2(g->ObjectsList, CreateLineEx(info, -1, -1, 2, 900.0, 800.0, 1000.0, 600.0), LINE);
 	addobj_sk2(g->ObjectsList, CreateLineEx(info, -1, myarrow, 2, 1000.0, 600.0, 1300.0, 600.0), LINE);
 
-	write_sk2(info);
+	//write_sk2(info);
 	return(0);
 }
 
